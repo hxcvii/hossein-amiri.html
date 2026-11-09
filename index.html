@@ -3,12 +3,12 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#171411">
 <title>HXC VII | ابزارهای هوشمند کسب‌وکار</title>
 <meta name="description" content="HXC VII؛ ابزارهای نرم‌افزاری کاربردی برای مدیریت و رشد کسب‌وکارها.">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
 :root{--bg:#171411;--panel:#211d19;--cream:#e9dfd1;--muted:#a99b8b;--gold:#b99a76;--line:#39312a}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -47,96 +47,121 @@ h1 span{color:var(--gold)}
 .about p{color:var(--muted)}
 .contact{text-align:center;padding:75px 0}
 .contact p{color:var(--muted);margin-bottom:25px}
+.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:760px;margin:32px auto 0}
+.contact-card{display:flex;flex-direction:column;align-items:center;gap:5px;padding:22px 14px;background:var(--panel);border:1px solid var(--line);border-radius:14px;transition:.2s}
+a.contact-card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.contact-card strong{font-size:17px}
+.contact-card span:last-child{color:var(--muted);font-size:13px;overflow-wrap:anywhere}
+.contact-label{color:var(--gold);font-size:10px;letter-spacing:2px;direction:ltr}
 footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:12px}
 .footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
 @media(max-width:750px){
- nav{align-items:flex-start;flex-direction:column}
- nav a{margin:0 0 0 15px}
- .hero{padding:70px 0 55px}
- .products{grid-template-columns:1fr}
- .card{min-height:260px}
- .section{padding:48px 0}
+nav{align-items:flex-start;flex-direction:column}
+nav a{margin:0 0 0 15px}
+.hero{padding:70px 0 55px}
+.products{grid-template-columns:1fr}
+.contact-grid{grid-template-columns:1fr}
+.card{min-height:260px}
+.section{padding:48px 0}
 }
 </style>
 </head>
 <body>
 <header>
- <div class="wrap">
-  <nav>
-   <a class="logo" href="#">HXC <span>VII</span></a>
-   <div>
-    <a href="#products">محصولات</a>
-    <a href="#about">درباره ما</a>
-    <a href="#contact">ارتباط</a>
-   </div>
-  </nav>
- </div>
+<div class="wrap">
+<nav>
+<a class="logo" href="#">HXC <span>VII</span></a>
+<div>
+<a href="#products">محصولات</a>
+<a href="#about">درباره ما</a>
+<a href="#contact">ارتباط</a>
+</div>
+</nav>
+</div>
 </header>
 
 <main>
- <section class="hero wrap">
-  <div class="eyebrow">TOOLS FOR BETTER BUSINESS</div>
-  <h1>ابزارهای هوشمند برای <span>کسب‌وکارهای بهتر</span></h1>
-  <p>در HXC VII ابزارهای نرم‌افزاری کاربردی طراحی می‌کنیم تا کارهای روزمره کسب‌وکارها ساده‌تر، سریع‌تر و دقیق‌تر انجام شوند.</p>
-  <a class="btn" href="#products">مشاهده محصولات</a>
-  <a class="btn btn-outline" href="#contact">ارتباط با ما</a>
- </section>
+<section class="hero wrap">
+<div class="eyebrow">TOOLS FOR BETTER BUSINESS</div>
+<h1>ابزارهای هوشمند برای <span>کسب‌وکارهای بهتر</span></h1>
+<p>در HXC VII ابزارهای نرم‌افزاری کاربردی طراحی می‌کنیم تا کارهای روزمره کسب‌وکارها ساده‌تر، سریع‌تر و دقیق‌تر انجام شوند.</p>
+<a class="btn" href="#products">مشاهده محصولات</a>
+<a class="btn btn-outline" href="#contact">ارتباط با ما</a>
+</section>
 
- <section class="section wrap" id="products">
-  <div class="section-head">
-   <div class="eyebrow">OUR PRODUCTS</div>
-   <h2>محصولات HXC VII</h2>
-   <p>راهکارهایی کاربردی برای مدیریت بهتر کسب‌وکار</p>
-  </div>
+<section class="section wrap" id="products">
+<div class="section-head">
+<div class="eyebrow">OUR PRODUCTS</div>
+<h2>محصولات HXC VII</h2>
+<p>راهکارهایی کاربردی برای مدیریت بهتر کسب‌وکار</p>
+</div>
+<div class="products">
+<article class="card">
+<div class="number">01 / INVOICE</div>
+<h3>فاکتورساز</h3>
+<p>ساخت فاکتورهای حرفه‌ای و مرتب، بدون نیاز به ثبت‌نام. مناسب برای کسب‌وکارهایی که به صدور سریع فاکتور نیاز دارند.</p>
+<span class="tag">نسخه اولیه آماده</span>
+<a class="link" href="https://github.com/hxcvii/faktor-saz-farsi" target="_blank" rel="noopener">مشاهده پروژه در GitHub ←</a>
+</article>
+<article class="card">
+<div class="number">02 / CRM</div>
+<h3>CRM فارسی</h3>
+<p>راهکاری برای مدیریت ارتباط با مشتریان، پیگیری فرصت‌های فروش و سامان‌دهی فرایندهای ارتباطی کسب‌وکار.</p>
+<span class="tag">در حال توسعه</span>
+<a class="link" href="https://github.com/hxcvii/crm-fa-iran" target="_blank" rel="noopener">مشاهده پروژه در GitHub ←</a>
+</article>
+<article class="card">
+<div class="number">03 / SALES</div>
+<h3>دستیار فروش</h3>
+<p>ابزاری برای ثبت و تحلیل فروش، پیگیری عملکرد و کمک به مدیریت دقیق‌تر فعالیت‌های فروش.</p>
+<span class="tag">در حال توسعه</span>
+<a class="link" href="#contact">درخواست اطلاعات ←</a>
+</article>
+</div>
+</section>
 
-  <div class="products">
-   <article class="card">
-    <div class="number">01 / INVOICE</div>
-    <h3>فاکتورساز</h3>
-    <p>ساخت فاکتورهای حرفه‌ای و مرتب، بدون نیاز به ثبت‌نام. مناسب برای کسب‌وکارهایی که به صدور سریع فاکتور نیاز دارند.</p>
-    <span class="tag">نسخه اولیه آماده</span>
-    <a class="link" href="https://github.com/hxcvii/faktor-saz-farsi" target="_blank" rel="noopener">مشاهده پروژه در GitHub ←</a>
-   </article>
+<section class="section about" id="about">
+<div class="wrap about-inner">
+<div class="eyebrow">ABOUT HXC VII</div>
+<h2>فناوری باید کار را ساده‌تر کند.</h2>
+<p>هدف HXC VII ساخت ابزارهایی قابل استفاده، کاربردی و قابل توسعه است. محصولات ما می‌توانند به‌صورت آماده ارائه شوند یا متناسب با نیاز هر کسب‌وکار شخصی‌سازی شوند.</p>
+</div>
+</section>
 
-   <article class="card">
-    <div class="number">02 / CRM</div>
-    <h3>CRM فارسی</h3>
-    <p>راهکاری برای مدیریت ارتباط با مشتریان، پیگیری فرصت‌های فروش و سامان‌دهی فرایندهای ارتباطی کسب‌وکار.</p>
-    <span class="tag">در حال توسعه</span>
-    <a class="link" href="https://github.com/hxcvii/crm-fa-iran" target="_blank" rel="noopener">مشاهده پروژه در GitHub ←</a>
-   </article>
-
-   <article class="card">
-    <div class="number">03 / SALES</div>
-    <h3>دستیار فروش</h3>
-    <p>ابزاری برای ثبت و تحلیل فروش، پیگیری عملکرد و کمک به مدیریت دقیق‌تر فعالیت‌های فروش.</p>
-    <span class="tag">در حال توسعه</span>
-    <a class="link" href="#contact">درخواست اطلاعات ←</a>
-   </article>
-  </div>
- </section>
-
- <section class="section about" id="about">
-  <div class="wrap about-inner">
-   <div class="eyebrow">ABOUT HXC VII</div>
-   <h2>فناوری باید کار را ساده‌تر کند.</h2>
-   <p>هدف HXC VII ساخت ابزارهایی قابل استفاده، کاربردی و قابل توسعه است. محصولات ما می‌توانند به‌صورت آماده ارائه شوند یا متناسب با نیاز هر کسب‌وکار شخصی‌سازی شوند.</p>
-  </div>
- </section>
-
- <section class="contact wrap" id="contact">
-  <div class="eyebrow">LET'S BUILD SOMETHING</div>
-  <h2>برای شروع همکاری آماده‌ایم.</h2>
-  <p>برای دریافت اطلاعات محصولات، درخواست دمو یا سفارش شخصی‌سازی با ما در ارتباط باشید.</p>
-  <a class="btn" href="https://github.com/hxcvii" target="_blank" rel="noopener">ارتباط از طریق GitHub</a>
- </section>
+<section class="contact wrap" id="contact">
+<div class="eyebrow">LET'S BUILD SOMETHING</div>
+<h2>برای شروع همکاری آماده‌ایم.</h2>
+<p>برای دریافت اطلاعات محصولات، درخواست دمو یا سفارش شخصی‌سازی از راه دلخواه با ما در ارتباط باشید.</p>
+<div class="contact-grid">
+<a class="contact-card" href="https://wa.me/989370908343" target="_blank" rel="noopener">
+<span class="contact-label">WHATSAPP</span>
+<strong>واتساپ</strong>
+<span dir="ltr">+98 937 090 8343</span>
+</a>
+<a class="contact-card" href="mailto:ihosseinamiri75@gmail.com">
+<span class="contact-label">EMAIL</span>
+<strong>ایمیل</strong>
+<span dir="ltr">ihosseinamiri75@gmail.com</span>
+</a>
+<div class="contact-card">
+<span class="contact-label">TELEGRAM</span>
+<strong>تلگرام</strong>
+<span dir="ltr">@hxcvii.ir</span>
+</div>
+<a class="contact-card" href="https://instagram.com/402.97" target="_blank" rel="noopener">
+<span class="contact-label">INSTAGRAM</span>
+<strong>اینستاگرام</strong>
+<span dir="ltr">@402.97</span>
+</a>
+</div>
+</section>
 </main>
 
 <footer>
- <div class="wrap footer-inner">
-  <span>© 2026 HXC VII — All rights reserved.</span>
-  <span>Built for better business.</span>
- </div>
+<div class="wrap footer-inner">
+<span>© 2026 HXC VII — All rights reserved.</span>
+<span>Built for better business.</span>
+</div>
 </footer>
 </body>
 </html>
